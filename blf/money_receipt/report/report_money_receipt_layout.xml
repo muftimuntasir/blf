@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_money_receipt_layout">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page">
+                            <div class="row">
+
+                                <div class="col-xs-3">
+                                    Money Receipt
+                                </div>
+                            </div>
+
+                            <div class="oe_structure"/>
+
+                            <div style="align:center">
+                                <h2>
+                                    <span>MR # <span t-field="o.id"/></span>
+                                </h2>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <strong>Date:</strong>
+                                    <p t-field="o.date"/>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <strong>Received With Thanks From:</strong>
+                                    <p t-field="o.description"/>
+                                </div>
+                                <div class="col-xs-4">
+                                    <strong>Cash/P.O./D.D. No:</strong>
+                                    <p t-field="o.cash_po"/>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <strong>Deposit To:</strong>
+                                    <p t-field="o.deposit_to"/>
+                                </div>
+
+                                 <div class="col-xs-4">
+                                    <strong>Towards To:</strong>
+                                    <p t-field="o.towards_to"/>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <strong>TK:</strong>
+                                    <p t-field="o.amount"/>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <strong>Prepared By:</strong>
+                                    <p t-field="o.user_id"/>
+                                </div>
+
+                            </div>
+                            <hr/>
+                            <br/><br/>
+
+
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>
